@@ -74,7 +74,7 @@ class PaladinFightingStyle(FeatureSelector):
         "dueling": Dueling,
         "great": GreatWeaponFighting,
         "great-weapon fighting": GreatWeaponFighting,
-        "protection": Protection,
+        "projection": Protection,
     }
     name = "Fighting Style (Select One)"
     source = "Paladin"
@@ -397,3 +397,92 @@ class EmissaryOfRedemption(Feature):
 
     name = "Emissary of Redemption"
     source = "Paladin (Oath of Redemption)"
+
+# Oathbreaker
+class AuraOfHate(Feature):
+    """Starting at 7th level you, as well any fiends and 
+    undead within 10 feet of you, gain a bonus to melee weapon 
+    damage rolls equal to your Charisma modifier (minimum of +1). 
+    A creature can benefit from this feature from only one 
+    paladin at a time.
+    
+    At 18th level, the range of this aura increases to 30 feet.
+
+    """
+
+    name = "Aura of Hate"
+    source = "Paladin (Oathbreaker)"
+
+class SupernaturalResistance(Feature):
+    """At 15th level, you gain resistance to bludgeoning, piercing,
+    and slashing damage from nonmagical weapons.
+
+    """
+
+    name = "Supernatural Resistance"
+    source = "Paladin (Oathbreaker)"
+
+
+class DreadLord(Feature):
+    """At 20th level, you can, as an action, surround yourself with 
+    an aura of gloom that lasts for 1 minute. The aura reduces any 
+    bright light in a 30-foot radius around you to dim light. 
+    Whenever an enemy that is frightened by you starts its turn in the 
+    aura, it takes 4d10 psychic damage. Additionally, you and any 
+    creatures of your choosing in the aura are draped in deeper shadow. 
+    Creatures that rely on sight have disadvantage on attack rolls 
+    against creatures draped in this shadow.
+    
+    While the aura lasts, you can use a bonus action on your turn to 
+    cause the shadows in the aura to attack one creature. Make a melee spell 
+    attack against the target. If the attack hits, the target takes 
+    necrotic damage equal to 3d10 + your Charisma modifier.
+
+    After activating the aura, you can't do so again until you 
+    finish a long rest.
+
+    """
+
+    name = "Dread Lord"
+    source = "Paladin (Oathbreaker)"
+
+class ControlUndead(Feature):
+    """As an action, you target one undead creature you can see within 
+    30 feet of you. The target must make a Wisdom saving throw. 
+    On a failed save, the target must obey your commands for the next 24 hours, 
+    or until you use this Channel Divinity option again. An undead whose 
+    challenge rating is equal to or greater than your paladin 
+    level is immune to this effect.
+
+    """
+
+    name = "Channel Divinity: Control Undead"
+    source = "Paladin (Oathbreaker)"
+
+class DreadfulAspect(Feature):
+    """As an action, you channel the darkest emotions and focus them into 
+    a burst of magical menace. Each creature of your choice within 
+    30 feet of you must make a Wisdom saving throw if it can see you. 
+    On a failed save, the target is frightened of you for 1 minute. If a 
+    creature frightened by this effect ends its turn more than 30 feet away 
+    from you, it can attempt another Wisdom saving throw to end the effect on it.
+
+    """
+
+    name = "Channel Divinity: Dreadful Aspect"
+    source = "Paladin (Oathbreaker)"
+
+class HarnessDivinePower(Feature):
+    """Also at 3rd level, you can expend a use of your Channel Divinity
+    to fuel your spells. As a bonus action, you touch your holy symbol, 
+    utter a prayer, and regain one expended spell slot, the level of 
+    which can be no higher than half your proficiency bonus (rounded up). 
+    The number of times you can use this feature is based on the level 
+    you've reached in this class: 3rd level, once; 7th level, twice; 
+    and 15th level, thrice. You regain all expended uses when 
+    you finish a long rest.
+
+    """
+
+    name = "Harness Divine Power"
+    source = "Paladin"

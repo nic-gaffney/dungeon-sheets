@@ -385,7 +385,7 @@ class Shortsword(MartialWeapon, MeleeWeapon):
     cost = "10 gp"
     base_damage = "1d6"
     damage_type = "p"
-    weight = 2
+    weight = 0
     properties = "Finesse, light"
     is_finesse = True
     ability = "strength"
@@ -598,6 +598,11 @@ class SpearOfLightning(Spear):
     name = "Spear +1"
     damage_bonus = 1
     attack_bonus = 1
+
+class ScorchingSlasher(Dagger):
+    name = "Scorching Slasher"
+    base_damage = "2d4"
+    damage_type = "f"
 
 
 # Some lists of weapons for easy proficiency resolution

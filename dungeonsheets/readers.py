@@ -509,14 +509,14 @@ class FoundryCharacterReader(JSONCharacterReader):
             "cha": "charisma",
         }
         abilities = self.json_data()["data"]["abilities"]
-        save_proficiencies = []
+        save_proficiences = []
         for abbr, attr in attribute_names.items():
             char_props[attr] = self.as_int(abilities[abbr]["value"])
             # Check proficiency
             is_proficient = bool(abilities[abbr]["proficient"])
             if is_proficient:
-                save_proficiencies.append(attr)
-        char_props["saving_throw_proficiencies"] = save_proficiencies
+                save_proficiences.append(attr)
+        char_props["saving_throw_proficiencies"] = save_proficiences
         # Skill proficiencies
         skill_names = [
             "acrobatics",

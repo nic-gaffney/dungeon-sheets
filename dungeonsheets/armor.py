@@ -214,6 +214,13 @@ class PlateMail(HeavyArmor):
     stealth_disadvantage = True
     weight = 65
 
+class RustedPlate(HeavyArmor):
+    name = "Rusted Plate"
+    cost = "1,000 gp"
+    base_armor_class = 16
+    strength_required = 15
+    stealth_disadvantage = True
+    weight = 65
 
 # Custom Armor
 class ElvenChain(MediumArmor):
@@ -226,5 +233,5 @@ class ElvenChain(MediumArmor):
 
 light_armors = [PaddedArmor, LeatherArmor, StuddedLeatherArmor]
 medium_armors = [HideArmor, ChainShirt, ScaleMail, Breastplate, HalfPlate]
-heavy_armors = [RingMail, ChainMail, SplintArmor, PlateMail]
+heavy_armors = [RingMail, ChainMail, SplintArmor, PlateMail, RustedPlate]
 all_armors = light_armors + medium_armors + heavy_armors

@@ -15,7 +15,7 @@ class Race:
     owner = None
     languages = ("Common",)
     proficiencies_text = tuple()
-    weapon_proficiencies = tuple()
+    weapon_proficiences = tuple()
     skill_proficiencies = ()
     skill_choices = ()
     num_skill_choices = 0
@@ -61,7 +61,7 @@ class _Dwarf(Race):
     languages = ("Common", "Dwarvish")
     constitution_bonus = 2
     proficiencies_text = ("battleaxes", "handaxes", "throwing hammers", "warhammers")
-    weapon_proficiencies = (
+    weapon_proficiences = (
         weapons.Battleaxe,
         weapons.Handaxe,
         weapons.ThrowingHammer,
@@ -80,7 +80,6 @@ class HillDwarf(_Dwarf):
 class MountainDwarf(_Dwarf):
     name = "Mountain Dwarf"
     strength_bonus = 2
-    proficiencies_text = _Dwarf.proficiencies_text + ("Light armor", "Medium Armor")
 
 
 # Elves
@@ -147,7 +146,7 @@ class _Halfling(Race):
     speed = 25
     dexterity_bonus = 2
     languages = ("Common", "Halfling")
-    features = (feats.HalflingLuck, feats.Brave, feats.HalflingNimbleness)
+    features = (feats.Lucky, feats.Brave, feats.HalflingNimbleness)
 
 
 class LightfootHalfling(_Halfling):
@@ -296,7 +295,7 @@ class ProtectorAasimar(_Aasimar):
     name = "Protector Aasimar"
     wisdom_bonus = 1
     features_by_level = defaultdict(list)
-    features_by_level[3] += [feats.AasimarRadiantSoul]
+    features_by_level[3] += [feats.RadiantSoul]
 
 
 # Fallen Aasimar
@@ -389,7 +388,7 @@ class Tabaxi(Race):
     speed = "30 (20 climb)"
     languages = ("Common", "[Choose One]")
     weapon_proficiencies = (weapons.Claws,)
-    proficiencies_text = ("Claws",)
+    proficiences_text = ("Claws",)
     skill_proficiencies = ("perception", "stealth")
     features = (
         feats.Darkvision,
@@ -428,7 +427,7 @@ class Aarakocra(Race):
     wisdom_bonus = 1
     languages = ("Common", "Aarakocra", "Auran")
     weapon_proficiencies = (weapons.Talons,)
-    proficiencies_text = ("Talons",)
+    proficiences_text = ("Talons",)
 
     def __init__(self, owner=None):
         super().__init__(owner=owner)

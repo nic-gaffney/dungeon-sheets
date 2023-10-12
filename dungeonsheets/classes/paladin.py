@@ -25,6 +25,42 @@ class PaladinOath(SubClass):
     def spells_prepared(self):
         return self.spells_known
 
+class Oathbreaker(PaladinOath):
+    """If a paladin willfully violates their Oaths and shows no sign of repentance 
+    and draw power from this, the consequences can be serious. An impenitent 
+    paladin might be forced to abandon their class and adopt another, such as the 
+    Oathbreaker. Paladins who break their oaths may take this class when they change 
+    from their original class, or they may choose to take this class instead of 
+    taking an oath.
+
+    **Tenets of a Broken Oath**:
+
+    --Godless. The gods lie. The power they would grant you was already yours to command.
+
+    --Oathless. I will take no oaths. I will follow no laws of god or man. 
+    I am subject to my own will alone.
+
+    --Wordless. What one says is meaningless. What you do, is what you are.
+
+    --Merciless. Those who are bound to the will of others must be freed. 
+    Those who fail to exercise their own will must be purged.
+
+
+    """
+
+    name = "Oathbreaker"
+    _oath_spells = {
+        3: [spells.HellishRebuke, spells.InflictWounds],
+        5: [spells.CrownOfMadness, spells.Darkness],
+        9: [spells.AnimateDead, spells.BestowCurse],
+        13: [spells.Blight, spells.Confusion],
+        17: [spells.Contagion, spells.DominatePerson],
+    }
+    features_by_level = defaultdict(list)
+    features_by_level[3] = [features.ControlUndead, features.DreadfulAspect]
+    features_by_level[7] = [features.AuraOfHate]
+    features_by_level[15] = [features.SupernaturalResistance]
+    features_by_level[20] = [features.DreadLord]
 
 class OathOfDevotion(PaladinOath):
     """The Oath of Devotion binds a paladin to the loftiest ideals of justice,
@@ -380,6 +416,7 @@ class Paladin(CharClass):
     features_by_level[11] = [features.ImprovedDivineSmite]
     features_by_level[14] = [features.CleansingTouch]
     subclasses_available = (
+        Oathbreaker,
         OathOfDevotion,
         OathOfAncients,
         OathOfVengeance,

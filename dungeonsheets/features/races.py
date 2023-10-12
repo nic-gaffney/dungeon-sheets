@@ -153,7 +153,7 @@ class DrowMagic(Feature):
 
 
 # Halflings
-class HalflingLuck(Feature):
+class Lucky(Feature):
     """When you roll a 1 on an attack roll, ability check, or saving throw, you can
     reroll the die and must use the new roll.
 
@@ -412,7 +412,7 @@ class LightBearer(Feature):
     source = "Race (Aasimar)"
 
 
-class AasimarRadiantSoul(Feature):
+class RadiantSoul(Feature):
     """Starting at 3rd level, you can use your action to unleash the divine
     energy within yourself, causing your eyes to glimmer and two luminous,
     incorporeal wings to sprout from your back.
@@ -428,7 +428,7 @@ class AasimarRadiantSoul(Feature):
 
     """
 
-    name = "Aasimar Radiant Soul"
+    name = "Radiant Soul"
     source = "Race (Protector Aasimar)"
 
 
@@ -569,7 +569,7 @@ class CunningArtisan(Feature):
     """As part of a short rest, you can harvest bone and hide from a slain
     beast, construct, dragon, monstrosity, or plant creature of size Small or
     larger to create one of the following items: a shield, a club, a javelin,
-    or 1d4 darts or blowgun needles. To use this trait, you need a blade, such
+    or ld4 darts or blowgun needles. To use this trait, you need a blade, such
     as a dagger, or appropriate artisan's tools, such as leatherworker's
     tools.
 
@@ -947,11 +947,11 @@ class MagicResistance(Feature):
     """You have advantage on saving throws against spells and other magical effects."""
 
     name = "Magic Resistance"
-    source = "Race (Yuan-Ti Pureblood)"
+    source = "Race (Yuan_Ti Pureblood)"
 
 
 class PoisonImmunity(Feature):
     """You are immune to poison damage and the poi~oned condition."""
 
     name = "Poison Immunity"
-    source = "Race (Yuan-Ti Pureblood)"
+    source = "Race (Yuan_Ti Pureblood)"

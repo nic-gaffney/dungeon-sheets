@@ -76,6 +76,14 @@ class MagicItem:
             bonus = self.st_bonus_all
         return bonus
 
+class BirdOfParadise(MagicItem):
+    """You gain a +1 bonus to Charisma checks
+
+    """
+    name = "Bird of Paradise"
+    rarity = "Rare"
+    item_type = "Animal"
+
 
 class CloakOfProtection(MagicItem):
     """You gain a +1 bonus to AC and Saving Throws while wearing this
@@ -470,13 +478,13 @@ class PotionOfHealing(MagicItem):
     +-----------------+-----------+-------------+
     | Potion of ...   | Rarity    | HP Regained |
     +=================+===========+=============+
-    |Healing          | Common	  | 2d4 + 2     |
+    |Healing          | Common    | ``2d4 + 2`` |
     +-----------------+-----------+-------------+
-    |Greater healing  | Uncommon  | 4d4 + 4     |
+    |Greater healing  | Uncommon  | ``4d4 + 4`` |
     +-----------------+-----------+-------------+
-    |Superior healing | Rare      | 8d4 + 8     |
+    |Superior healing | Rare      | ``8d4 + 8`` |
     +-----------------+-----------+-------------+
-    |Supreme healing  | Very rare | 10d4 + 20   |
+    |Supreme healing  | Very rare |``10d4 + 20``|
     +-----------------+-----------+-------------+
 
     """
