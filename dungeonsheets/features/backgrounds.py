@@ -75,6 +75,10 @@ class RusticHospitality(Feature):
     name = "Rustic Hospitality"
     source = "Background (Folk Hero)"
 
+class HeartOfDarkness(Feature):
+    """Those who look into your eyes can see that you have faced unimaginable horror and that you are no stranger to darkness. Though they might fear you, commoners will extend you every courtesy and do their utmost to help you. Unless you have shown yourself to be a danger to them, they will even take up arms to fight alongside you, should you find yourself facing an enemy alone."""
+
+
 
 class GuildMembership(Feature):
     """As an established and respected member of a guild, you can rely on certain

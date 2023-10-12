@@ -204,6 +204,12 @@ class FactionAgent(Background):
     languages = ("[choose one]", "[choose one]")
     features = (feats.SafeHaven,)
 
+class HauntedOne(Background):
+    name = "Haunted One"
+    skill_choices = ('arcana', 'investigation', 'religion', 'survival')
+    num_skill_choices = 2
+    languages = ("[choose one]", "[choose one]",)
+    features = (feats.HeartOfDarkness,)
 
 class FarTraveler(Background):
     name = "Far Traveler"
@@ -277,6 +283,7 @@ PHB_backgrounds = [
     Pirate,
     Soldier,
     Urchin,
+    HauntedOne,
 ]
 
 SCAG_backgrounds = [
